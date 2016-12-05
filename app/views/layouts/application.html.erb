@@ -6,9 +6,31 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Theme CSS -->
+    <!-- <link href="https://blackrockdigital.github.io/startbootstrap-clean-blog/css/clean-blog.min.css" rel="stylesheet"> -->
+
+
   </head>
 
   <body>
+    <!-- two different ways to get immages: -->
+    <!-- <%= image_tag 'blogpic.jpg' %> -->
+    <!-- <img src="<%= image_path('blogpic.jpg') %>" /> -->
+
+    <header style="background-image: url('<%= image_path('blogpic.jpg') %>')">
+
+
+    </header>
+    <!-- Navigation -->
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
