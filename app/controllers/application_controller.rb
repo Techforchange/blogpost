@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def create
     render plain: params[:article].inspect
   end
+
+  def destroy_user_session_path
+    root_path
+  end
 end
